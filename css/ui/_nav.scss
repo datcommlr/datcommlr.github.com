@@ -68,39 +68,39 @@
 	}
 
 	.city-nav__shows .city-nav__link{ 		
-		// padding-left:24px;
+		padding-left:24px;
 		@include media-query(lap){ padding-left:46px }
 		@include media-query(desk){ padding-left:46px }
 	}
 
 	.city-nav__shop .city-nav__link{ 		
-		// padding-left:13px;
+		padding-left:13px;
 		@include media-query(lap){ padding-left:25px }
 		@include media-query(desk){ padding-left:25px }
 	}
 
 	.city-nav__mail-list .city-nav__link{ 	
-		// padding-left:8px;
+		padding-left:2px;
 		@include media-query(lap){ padding-left:24px }
 		@include media-query(desk){ padding-left:24px }
 	}
 
 	.city-nav__about .city-nav__link{ 		
-		// padding-left:2px;
 		@include media-query(lap){ padding-left:5px }
 		@include media-query(desk){ padding-left:5px }
 	}
 
 	.city-nav__blog .city-nav__link{ 		
-		// padding-right:3px;
+		padding-right:5px;
 		@include media-query(lap){ padding-right:6px }
 		@include media-query(desk){ padding-right:6px }
 	}
 
 	.city-nav__contact .city-nav__link{ 	
-		// padding-right:0px;
-		@include media-query(lap){ padding-right:9px }
-		@include media-query(desk){ padding-right:9px }
+		position:relative;
+		left:-4px;
+		@include media-query(lap){ padding-right:9px; left:0px; }
+		@include media-query(desk){ padding-right:9px; left:0px; }
 	}
 
 
