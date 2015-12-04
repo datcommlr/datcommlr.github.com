@@ -23,7 +23,7 @@
 	@extend .nav;
 	font-size:0px;
 
-	min-width:347px;
+	min-width:259px;
 	@include media-query(lap){ min-width:685px }
 	@include media-query(desk){ min-width:864px }
 
