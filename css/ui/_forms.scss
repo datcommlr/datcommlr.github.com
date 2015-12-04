@@ -36,7 +36,7 @@
 	@include media-query(lap-and-up){ display:table }
 
 	li{
-		&:not(:first-child){ margin-top:$base-spacing-unit*2 }
+		&:not(:first-child){ margin-top:$base-spacing-unit }
 		@include media-query(lap-and-up){
 			display:table-cell;
 			margin-top:0px;
@@ -45,13 +45,18 @@
 	}
 
 	.email{
-		font-size:32px;
-		width:$base-spacing-unit*14;
+		font-size:24px;
+		width:$base-spacing-unit*9;
 		text-align:center;
 		padding:$half-spacing-unit/2 2px;
 		border-left-width:0px;
 		border-right-width:0px;
 		border-top-width:0px;
+
+		@include media-query(lap-and-up){
+			width:$base-spacing-unit*14;
+			font-size:32px;
+		}
 	}
 
 	.submit{
