@@ -128,11 +128,12 @@
 .nav--footer{
 	margin-bottom:0px;
 	.nav__link{
-		font-size:19px;
+		font-size:16px;
 		a{ color:blue;text-decoration:none; }
 		
 		a:hover, &.current a{ text-decoration:underline; }
 		@include media-query(lap-and-up){
+			font-size:19px;
 			&:first-child a{ padding-left:0px; }
 		}
 	}
