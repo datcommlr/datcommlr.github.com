@@ -61,7 +61,7 @@
 
 	.city-nav__img{
 		width:auto;
-		height:167px;
+		height:$base-spacing-unit*5.5;
 		margin:0px;
 		@include media-query(lap){ height:320px }
 		@include media-query(desk){ height:auto }
