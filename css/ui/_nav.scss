@@ -47,7 +47,7 @@
 		text-decoration:none;
 		font-weight:bold;
 		opacity:.2;
-		font-size:14px;
+		font-size:12px;
 		color:$text-color;
 
 		@include media-query(lap-and-up){ font-size:18px }
@@ -61,7 +61,7 @@
 
 	.city-nav__img{
 		width:auto;
-		height:$base-spacing-unit*5.5;
+		height:$base-spacing-unit*5;
 		margin:0px;
 		@include media-query(lap){ height:320px }
 		@include media-query(desk){ height:auto }
