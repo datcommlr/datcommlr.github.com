@@ -23,7 +23,7 @@
 	@extend .nav;
 	font-size:0px;
 
-	min-width:259px;
+	min-width:281px;
 	@include media-query(lap){ min-width:685px }
 	@include media-query(desk){ min-width:864px }
 
@@ -61,7 +61,7 @@
 
 	.city-nav__img{
 		width:auto;
-		height:$base-spacing-unit*5;
+		height:$base-spacing-unit*5.5;
 		margin:0px;
 		@include media-query(lap){ height:320px }
 		@include media-query(desk){ height:auto }
