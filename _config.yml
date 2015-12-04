@@ -1,0 +1,33 @@
+###
+# Please do not edit below this line.
+###
+
+markdown: kramdown
+
+title: Letter Racer
+description: NYC Music Collective
+email: clark@datcomm.com
+baseurl: ""
+url: http://letterracer.com
+shop_url: http://shop.letterracer.com
+blog_url: http://blog.letterracer.com
+
+permalink: /shows/:title--:month-:day-:year
+
+
+defaults:
+-
+    scope:
+        path: ""
+        type: pages
+    values:
+        layout: default
+        twitter_card: summary
+-
+    scope:
+        path: ""
+        type: posts
+    values:
+        layout: post
+        section: shows
+        twitter_card: summary

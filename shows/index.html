@@ -1,0 +1,31 @@
+---
+layout: default
+title: Shows
+section: shows
+---
+
+{% capture nowtime %}{{ 'today' | date: '%s' }}{% endcapture %}
+{% assign upcoming_shows = false %}{% for post in site.posts %}{% capture posttime %}{{ post.date | date: '%s' }}{% endcapture %}{% if posttime > nowtime %}{% assign upcoming_shows = true %}{% endif %}{% endfor %}
+
+{% if upcoming_shows == false %}
+<h1 class="color-negative  text-center">No upcoming shows.</h1>
+{% endif %}
+
+<div class="grid  show-list  js-shows">
+{% for post in site.posts %}
+{% capture posttime %}{{ post.date | date: '%s' }}{% endcapture %}
+{% unless forloop.first %}-->{% endunless %}<div class="grid__item  one-quarter  palm-one-half">
+        <a href="{{ post.url }}" class="show-list__show{% if posttime < nowtime %}  show--passed{% endif %}">
+            <div class="show__date">{% include display-date.html date=post.date %}</div>
+            {% if post.poster_url %}<img class="show__poster" src="{{ post.poster_url }}">{% else %}
+            <hgroup class="show__artists">
+                {% for artist in post.artists %}
+                <h5 class="color-negative{% if forloop.last != true %}  hN{% endif %}">{{ artist }}</h5>
+                {% endfor %}
+            </hgroup>
+            {% endif %}
+            <div class="show__city">{{ post.city }}</div>
+        </a>
+    </div>{% unless forloop.last %}<!--{% endunless %}
+{% endfor %}
+</div>

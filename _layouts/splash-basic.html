@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="{{ page.color-scheme }}" lang="en">
+{% include redirect-url.liquid %}
+{% if page.splash %}
+
+{% include head.html nocache=true %}
+
+<body class="splash  {{ page.color-scheme }}">
+
+<div class="page  page--splash">
+    <div class="page__content">
+        <div class="wrapper">
+          <h3 {% if page.show_title == false %}class="transparent"{% endif %}>{{ page.title }}</h3>
+          <div id="player" class="media-player"></div>
+
+          <ul class="nav  nav--splash">
+              {% if page.shopify_product_id %}
+              <li class="nav__item">
+                  <a target="_blank" class="btn  btn--natural  btn--secondary  btn--link  btn--reg" href="http://store.letterracer.com/cart/{{ page.shopify_product_id }}:1">
+                      Buy Now
+                  </a>
+              </li>
+              {% endif %}
+
+              {% if page.link1_url && page.link1_text %}
+              <li class="nav__item">
+                  <a class="btn  btn--natural  btn--secondary  btn--link  btn--reg" href="{{ page.link1_url }}">
+                      {{ page.link1_text }}
+                  </a>
+              </li>
+              {% endif %}
+
+              {% if page.link2_url && page.link2_text %}
+              <li class="nav__item">
+                  <a class="btn  btn--natural  btn--secondary  btn--link  btn--reg" href="{{ page.link2_url }}">
+                      {{ page.link2_text }}
+                  </a>
+              </li>
+              {% endif %}
+
+              {% if page.link3_url && page.link3_text %}
+              <li class="nav__item">
+                  <a class="btn  btn--natural  btn--secondary  btn--link  btn--reg" href="{{ page.link3_url }}">
+                      {{ page.link3_text }}
+                  </a>
+              </li>
+              {% endif %}
+
+              <li class="nav__item">
+                  <a class="link-complex [ btn  btn--natural  btn--secondary  btn--positive  btn--reg ]" href="{{ splash_redirect_url }}">
+                      <span class="link-complex__target">Continue</span>
+                  </a>
+              </li>
+          </ul>
+
+          <script>
+          function onYouTubeIframeAPIReady() {
+              player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: '{{ page.video_id }}',
+                playerVars: { 'controls': 1, 'showinfo': 0, 'rel': 0 },
+                events: { 'onReady': onPlayerReady }
+              });
+          }
+
+          function onPlayerReady(event) {
+              player.playVideo();
+          }
+          </script>
+        </div>
+    </div>
+    <div class="push-footer"></div>
+</div>
+
+<footer class="page-foot">
+    <img class="page-foot__branding" src="/img/logo{% if page.color-scheme == 'wb' %}-invert{% endif %}.png" width="100" height="100">
+    <div class="page-foot__copyright  copyright">
+        Copyright &copy; 2015 Letter Racer
+    </div>
+</footer>
+
+<script>
+var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+</body>
+
+{% else %}
+
+{% include redirect-url.liquid %}
+{% include head.html nocache=true redirect_url=splash_redirect_url redirect_time=0 %}
+
+<body>
+<script>window.location="{{ splash_redirect_url }}";</script>
+</body>
+
+{% endif %}
+</html>

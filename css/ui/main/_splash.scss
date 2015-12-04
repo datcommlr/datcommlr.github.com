@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    SPLASH.CSS
+\*------------------------------------*/
+
+.wb{
+    color:$background-color;
+    background:$text-color;
+
+    .btn--link{
+        border-color:$background-color;
+        color:$background-color;
+    }
+}
+
+.nav--splash{
+    margin-top:$base-spacing-unit;
+    margin-bottom:$base-spacing-unit;
+}
+
+    .nav--splash .nav__item{ padding-bottom:$half-spacing-unit }
+
+.splash .page__content{
+    text-align:center;
+}
+
+.page--splash{ padding-top:$half-spacing-unit; }
+
+.media-player{
+    width:320px;
+    height:195px;
+    
+    @include media-query(lap-and-up){
+        height:390px;
+        width:640px;
+    }
+}
+
+.page-foot, .page--splash .push-footer{ height:$base-spacing-unit*6 }
+
+.splash .page, .splash .page-foot{ margin-bottom:-($base-spacing-unit*6)-$half-spacing-unit }
+
+.page-foot{
+    text-align:center;
+    padding-top:$half-spacing-unit;
+    width:100%;
+    font-weight:300;
+    text-transform:uppercase;
+    vertical-align:top;
+}
+
+    .page-foot__branding{
+        opacity:.8;
+        @include vendor(transition, opacity .4s);
+        &:hover{ opacity:1 }
+    }
+    .page-foot__copyright{
+        opacity:.6;
+        margin-top:$half-spacing-unit;
+    }

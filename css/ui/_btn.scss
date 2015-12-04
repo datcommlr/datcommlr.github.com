@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    $BTN.CSS
+\*------------------------------------*/
+
+.btn{
+    position:relative;
+    &:hover,&:active{ text-decoration:underline; }
+    &:active{ top:2px }
+}
+
+.btn--reg{
+    padding:$half-spacing-unit $base-spacing-unit;
+    font-size:18px;
+}
+
+.btn--primary, .btn--secondary{
+    @extend .btn--hard;
+    text-transform:uppercase;
+}
+
+.btn--secondary{
+    background-color:inherit;
+    border-style:solid;
+    border-width:1px;
+
+    &.btn--positive{ color:$beautons-positive }
+    &.btn--negative{ color:$beautons-negative }
+}
+
+.btn--link{
+    border-color:$text-color;
+    color:$text-color;
+}
+
+.btn--positive{
+    border-color:$beautons-positive;
+}

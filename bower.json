@@ -1,0 +1,24 @@
+{
+  "name": "Letter Racer",
+  "version": "0.0.1",
+  "authors": [
+    "datcomm <clark@datcomm.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://letterracer.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "headroom.js": "~0.7.0",
+    "jquery": "~2.1.4",
+    "remodal": "~1.0.5",
+    "inuit.css": "https://github.com/csswizardry/inuit.css.git#v5.1.0",
+    "masonry": "~3.3.2",
+    "imagesloaded": "~3.2.0"
+  }
+}

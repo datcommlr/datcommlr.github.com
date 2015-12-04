@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    $GRIDLINK.CSS
+\*------------------------------------*/
+
+// .gridlink{
+// 	margin-bottom:$base-spacing-unit;
+// 	display:block;
+// 	text-decoration:none;
+// 	@include font-size(11px);
+// 	padding:$half-spacing-unit;
+// 	border:solid transparent 1px;
+// 	@include vendor(transition, border-color .2s text-decoration .2s);
+// }
+
+// .gridlink:hover,.gridlink:active{
+// 	text-decoration:underline;
+// 	border-color:$text-color--darken2;
+// }
+
+// 	.gridlink__img{
+// 		@extend %scalable;
+// 	}
+
+// 	.gridlink__text{
+// 		@extend .brand-link;
+// 		text-transform:uppercase;
+// 		text-align:center;
+// 		padding-top:$half-spacing-unit;
+// 	}
+
+
+// .gridlink--artist{
+// 	.gridlink__img{}
+// 	.gridlink__text{}
+// }
+
+// .gridlink--product{
+// 	&:hover, &:active{ text-decoration:none!important; }
+// 	&:hover .product-title, &:active .product-title{ text-decoration:underline!important; }
+// 	.product-title .sale{ color:red; }
+// }
