@@ -14,7 +14,7 @@ layout: default
             {% endif %}
             <h5 class="hN">
                 <span class="show__date">{{ page.doors }} {{ page.date | date: "%a, %b %d %Y" }}</span>
-                @ {% if page.venue_location %}<a target="_blank" href="https://www.google.com/maps/place/{{ page.venue_location }}" title="Map">{{ page.venue }} [{{ page.city }}]</a>{% else %}{{ page.venue }} [{{ page.city }}]{% endif %}
+                <span class="show__venue">@ {% if page.venue_location %}<a target="_blank" href="https://www.google.com/maps/place/{{ page.venue_location }}" title="Map">{{ page.venue }} [{{ page.city }}]</a>{% else %}{{ page.venue }} [{{ page.city }}]{% endif %}</span>
             </h5>
             
         </hgroup>

@@ -29,6 +29,9 @@
         margin-top:$base-spacing-unit;
     }
 
+    .show__date,.show__venue{
+        @include media-query(palm){ clear:both;display:block; }
+    }
 
 
 .show-list{
